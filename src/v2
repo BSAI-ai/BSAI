@@ -1,0 +1,121 @@
+Skip to content
+BSAI-ai
+BSAI
+Repository navigation
+Code
+Issues
+Pull requests
+Agents
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+Owner avatar
+BSAI
+Public
+BSAI-ai/BSAI
+Go to file
+t
+T
+Name		
+BSAI-ai
+BSAI-ai
+Add initial HTML structure for the application
+6a5a20c
+ · 
+7 minutes ago
+.github/workflows
+Add npm publish workflow for Node.js package
+17 minutes ago
+src
+Create main.jsx
+30 minutes ago
+BSAI-github-ready.zip
+Add files via upload
+2 hours ago
+index.html
+Add initial HTML structure for the application
+7 minutes ago
+package.json
+Add files via upload
+1 hour ago
+postcss.config.js
+Add files via upload
+1 hour ago
+script.js
+Add files via upload
+2 hours ago
+styles.css
+Add files via upload
+2 hours ago
+tailwind.config.js
+Add files via upload
+1 hour ago
+vite.config.js
+Add files via upload
+1 hour ago
+Repository files navigation
+README
+Add a README
+Help people interested in this repository understand your project.
+
+About
+Web application for BSAI project.
+
+bsai-xi.vercel.app
+ Activity
+Stars
+ 0 stars
+Watchers
+ 0 watching
+Forks
+ 0 forks
+Releases
+No releases published
+Create a new release
+Deployments
+20
+ Production
++ 19 deployments
+Packages
+No packages published
+Publish your first package
+Contributors
+1
+@BSAI-ai
+BSAI-ai
+Languages
+JavaScript
+83.0%
+ 
+CSS
+16.4%
+ 
+HTML
+0.6%
+Suggested workflows
+Based on your tech stack
+Deno logo
+Deno
+Test your Deno project
+Datadog Synthetics logo
+Datadog Synthetics
+Run Datadog Synthetic tests within your GitHub Actions workflow
+Webpack logo
+Webpack
+Build a NodeJS project with npm and webpack.
+More workflows
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
