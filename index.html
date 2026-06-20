@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSAI | Modern AI Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation" data-i18n-aria-label="nav.aria">
+      <a class="brand" href="#" aria-label="BSAI home">
+        <span class="brand-mark">B</span>
+        <span>BSAI</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="nav.openMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" data-nav-links>
+        <a href="#tools" data-i18n="nav.tools">Tools</a>
+        <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <div class="nav-controls">
+        <label class="language-picker">
+          <span data-i18n="nav.language">Language</span>
+          <select id="languageSelect" aria-label="Select language" data-i18n-aria-label="nav.selectLanguage">
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="ne">नेपाली</option>
+            <option value="hi">हिन्दी</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+          </select>
+        </label>
+        <a class="nav-action" href="#tools" data-i18n="nav.getStarted">Get Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">AI productivity suite</p>
+        <h1 data-i18n="hero.title">BSAI helps you write, apply, summarize, and communicate faster.</h1>
+        <p class="hero-copy">
+          <span data-i18n="hero.copy">A clean collection of everyday AI tools for students, job seekers, professionals, and growing teams.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tools" data-i18n="hero.primaryCta">Explore Tools</a>
+          <a class="button secondary" href="#workflow" data-i18n="hero.secondaryCta">See How It Works</a>
+        </div>
+        <div class="hero-stats" aria-label="BSAI highlights" data-i18n-aria-label="hero.statsAria">
+          <span><strong>5</strong> <span data-i18n="hero.statTools">core AI tools</span></span>
+          <span><strong>24/7</strong> <span data-i18n="hero.statSupport">writing support</span></span>
+          <span><strong data-i18n="hero.statFast">Fast</strong> <span data-i18n="hero.statWorkflow">mobile workflow</span></span>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="AI chat preview" data-i18n-aria-label="hero.chatPreviewAria">
+        <div class="panel-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="chat-preview">
+          <div class="message user" data-i18n="chatPreview.user">Draft a professional follow-up email after an interview.</div>
+          <div class="message ai">
+            <span data-i18n="chatPreview.ai">Absolutely. Here is a polished version with a warm tone, clear gratitude, and a confident closing.</span>
+          </div>
+          <div class="composer">
+            <span data-i18n="chatPreview.placeholder">Ask BSAI anything...</span>
+            <button type="button" aria-label="Send preview message" data-i18n="chatPreview.send" data-i18n-aria-label="chatPreview.sendAria">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="tools.eyebrow">Featured tools</p>
+        <h2 data-i18n="tools.title">Everything you need to move from idea to finished text.</h2>
+      </div>
+
+      <div class="tool-grid">
+        <article class="tool-card active" data-tool="ai-chat">
+          <div class="tool-icon">AI</div>
+          <h3 data-i18n="tools.chat.title">AI Chat</h3>
+          <p data-i18n="tools.chat.body">Ask questions, brainstorm ideas, rewrite drafts, and get practical answers in seconds.</p>
+        </article>
+
+        <article class="tool-card" data-tool="resume-builder">
+          <div class="tool-icon">CV</div>
+          <h3 data-i18n="tools.resume.title">Resume Builder</h3>
+          <p data-i18n="tools.resume.body">Create clear, job-ready resumes with strong bullet points and professional formatting.</p>
+        </article>
+
+        <article class="tool-card" data-tool="cover-letter">
+          <div class="tool-icon">CL</div>
+          <h3 data-i18n="tools.cover.title">Cover Letter Generator</h3>
+          <p data-i18n="tools.cover.body">Generate tailored cover letters that connect your experience to the role.</p>
+        </article>
+
+        <article class="tool-card" data-tool="email-writer">
+          <div class="tool-icon">EM</div>
+          <h3 data-i18n="tools.email.title">Email Writer</h3>
+          <p data-i18n="tools.email.body">Write polished emails for work, sales, support, applications, and everyday communication.</p>
+        </article>
+
+        <article class="tool-card" data-tool="text-summarizer">
+          <div class="tool-icon">TS</div>
+          <h3 data-i18n="tools.summary.title">Text Summarizer</h3>
+          <p data-i18n="tools.summary.body">Turn long articles, notes, documents, and reports into concise summaries.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workflow">
+      <div class="workspace-copy">
+        <p class="eyebrow" data-i18n="workflow.eyebrow">Simple workflow</p>
+        <h2 data-i18n="workflow.title">Choose a tool, add context, and refine the result.</h2>
+        <p>
+          <span data-i18n="workflow.copy">BSAI is designed for focused work. Each tool keeps the interface direct, responsive, and easy to use on desktop or mobile.</span>
+        </p>
+      </div>
+
+      <div class="workspace-demo">
+        <div class="demo-tabs" role="tablist" aria-label="Tool examples" data-i18n-aria-label="workflow.tabsAria">
+          <button class="demo-tab active" type="button" data-example="chat" data-i18n="demo.chat.tab">Chat</button>
+          <button class="demo-tab" type="button" data-example="resume" data-i18n="demo.resume.tab">Resume</button>
+          <button class="demo-tab" type="button" data-example="summary" data-i18n="demo.summary.tab">Summary</button>
+        </div>
+        <div class="demo-window" data-demo-window>
+          <h3 data-i18n="demo.chat.title">AI Chat</h3>
+          <p data-i18n="demo.chat.body">Ask BSAI to plan, explain, rewrite, or generate content with a clear and professional tone.</p>
+          <div class="demo-output" data-i18n="demo.chat.output">"Give me three strong LinkedIn headline options for a junior web developer."</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div>
+        <p class="eyebrow" data-i18n="pricing.eyebrow">Start focused</p>
+        <h2 data-i18n="pricing.title">Launch with the homepage now. Add each tool page next.</h2>
+      </div>
+      <a class="button primary" href="#contact" data-i18n="pricing.cta">Request Access</a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div>
+      <a class="brand" href="#">
+        <span class="brand-mark">B</span>
+        <span>BSAI</span>
+      </a>
+      <p data-i18n="footer.copy">Modern AI tools for everyday productivity.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#tools" data-i18n="nav.tools">Tools</a>
+      <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
+      <a href="mailto:hello@bsai.example">hello@bsai.example</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
