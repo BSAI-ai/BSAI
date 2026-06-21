@@ -1,0 +1,87 @@
+import OpenAI from "openai";
+
+/**
+ * Basic OpenAI client instance.
+ * Ensure process.env.OPENAI_API_KEY is set in your environment.
+ */
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+/**
+ * POST /api/ai
+ * body: { message: string, model?: string, temperature?: number }
+ */
+export default async function handler(req, res) {
+  // Allow only POST for this endpoint
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed. Use POST." });
+  }
+
+  // Optional: very simple CORS handling for development; tighten in production.
+  // Uncomment if you need cross-origin access:
+  // res.setHeader("Access-Control-Allow-Origin", process.env.CORS_ORIGIN || "*");
+
+  try {
+    const { message, model = process.env.OPENAI_MODEL || "gpt-4o-mini", temperature = 0.7 } =
+      req.body || {};
+
+    // Validate input early
+    if (!message || typeof message !== "string" || message.trim().length === 0) {
+      return res.status(400).json({ error: "Request body must include a non-empty `message` string." });
+    }
+
+    // Prevent excessively large inputs (adjust the limit as appropriate)
+    const MAX_MESSAGE_LENGTH = 20_000;
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return res.status(413).json({ error: `Message too long. Max ${MAX_MESSAGE_LENGTH} characters.` });
+    }
+
+    // Build messages array (you can customize system prompt)
+    const messages = [
+      { role: "system", content: "You are a helpful AI chat assistant." },
+      { role: "user", content: message },
+    ];
+
+    // Call the OpenAI chat/completions API.
+    // Note: different OpenAI SDK versions shape the response differently.
+    const response = await client.chat.completions.create({
+      model,
+      messages,
+      temperature,
+    });
+
+    // Robust extraction of the reply text — supports several SDK response shapes
+    let reply =
+      response?.choices?.[0]?.message?.content ?? // shape: {choices:[{message:{content}}]}
+      response?.choices?.[0]?.text ?? // shape: {choices:[{text}]}
+      response?.output?.[0]?.content?.find(c => c.type === "output_text")?.text ?? // other shapes
+      null;
+
+    // If we didn't find the reply, include raw response for debugging (avoid in prod)
+    if (!reply) {
+      console.warn("Unexpected OpenAI response shape:", JSON.stringify(response?.toString?.() ?? response));
+      return res.status(502).json({ error: "Unexpected response from AI provider", raw: response });
+    }
+
+    // Return the assistant reply and some metadata
+    return res.status(200).json({
+      reply,
+      meta: {
+        model,
+        id: response?.id ?? null,
+      },
+    });
+  } catch (err) {
+    // Log error server-side; return a helpful but safe message to client
+    console.error("AI handler error:", err);
+
+    // Try to detect common API error properties (status, message)
+    const status = err?.status || err?.statusCode || 500;
+    const message = err?.message || "AI request failed";
+
+    // Avoid leaking secrets in the error response in production
+    return res.status(status).json({ error: message });
+  }
+}
