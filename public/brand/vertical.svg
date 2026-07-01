@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" role="img" aria-label="BSAI vertical logo">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+  <rect x="48" y="24" width="64" height="64" rx="18" fill="none" stroke="url(#brand)" stroke-width="3" />
+  <path d="M69 36c0-2 2-4 4-4h6c6 0 10 4 10 10 0 5-4 8-10 8h-6" fill="none" stroke="url(#brand)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M69 60c0 2 2 4 4 4h6c6 0 10-4 10-10 0-5-4-8-10-8h-6" fill="none" stroke="url(#brand)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="75" cy="48" r="4" fill="#10B981" />
+  <circle cx="88" cy="40" r="2.5" fill="#2563EB" />
+  <path d="M79 48h8" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" />
+  <text x="80" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="middle" fill="#0F172A" letter-spacing="1.2">BSAI</text>
+  <text x="80" y="176" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#64748B" letter-spacing="2.5">INTELLIGENCE</text>
+</svg>

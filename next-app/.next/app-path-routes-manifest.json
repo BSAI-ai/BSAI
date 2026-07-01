@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/ai/route": "/api/ai",
+  "/icon.svg/route": "/icon.svg",
+  "/about/page": "/about",
+  "/chat/page": "/chat",
+  "/contact/page": "/contact",
+  "/dashboard/page": "/dashboard",
+  "/cv-builder/page": "/cv-builder",
+  "/jobs/page": "/jobs",
+  "/learn/page": "/learn",
+  "/login/page": "/login",
+  "/page": "/",
+  "/settings/page": "/settings",
+  "/privacy/page": "/privacy",
+  "/translator/page": "/translator",
+  "/terms/page": "/terms",
+  "/signup/page": "/signup"
+}
